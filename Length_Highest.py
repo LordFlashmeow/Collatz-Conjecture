@@ -44,7 +44,10 @@ def longest(start, stop):
     return dict_length
 
 
-def combined(dict_length, dict_max):
+def combined(start, stop,):
+    dict_length = longest(start, stop)
+    dict_max = highest(start, stop)
+
     final_dict = {}
     for key in (dict_length.keys() | dict_max.keys()):
         if key in dict_length: final_dict.setdefault(key, []).append(dict_length[key])
@@ -55,6 +58,6 @@ def combined(dict_length, dict_max):
 start = int(input("Enter the number to start at "))
 stop = int(input("Enter the number to end at "))
 
-print(combined(longest(start, stop), highest(start, stop)))
+print(combined(start, stop))
 
 
