@@ -55,9 +55,9 @@ def combined(start, stop,):
     return final_dict
 
 
-start = int(input("Enter the number to start at "))
-stop = int(input("Enter the number to end at "))
+start_num = int(input("Enter the number to start at "))
+stop_num = int(input("Enter the number to end at "))
 
-print(combined(start, stop))
+print(combined(start_num, stop_num))
 
 
